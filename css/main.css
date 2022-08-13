@@ -1,0 +1,87 @@
+main.index{
+    background: url(../imgs/fundo.png) no-repeat center center;
+    background-size: cover;
+    height: 94.9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}   
+.textos h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 64px;
+    text-align: center;
+    color: white;
+}
+.textos p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.botao-main{
+    width: 400px;
+    height: 100px;
+    background: #394A59;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 30px;
+    line-height: 56px;
+    border: none;
+    cursor: pointer;
+}
+.botao-main:hover{
+    background: #242e36;
+    color: rgb(175, 175, 175);
+}
+.imagem-fundo{
+    display: none;
+}
+
+@media (max-width:999px) {
+    main.index{
+        background: none;
+        display: grid;
+        grid-template-areas: 'texto'
+        'foto'
+        'botao';
+        justify-items: center;
+        margin: 0 auto;
+        background: #242e36;
+        height: 94.9vh;
+    }
+    .textos{
+        grid-area: 'texto';
+        margin-top: 30px;
+    }
+    .textos h1{
+        font-size: 32px;
+    }
+    .textos p{
+        font-size: 20px;
+    }
+    .imagem-fundo{
+        display: block;
+        grid-area: 'foto';
+    }
+    .imagem-fundo img{
+        margin: 20px auto;
+    }
+    .botao-main{
+        width: 200px;
+        height: 60px;
+        background: #394A59;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: -10px;
+    }
+
+}

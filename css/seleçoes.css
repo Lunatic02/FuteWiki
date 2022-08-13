@@ -1,0 +1,271 @@
+main.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'escudo historia historia'
+    'titulos titulos titulos'
+    'idolos idolos idolos'
+    'idolo idolo idolo'
+    'clubes clubes clubes'
+    'estadio estadio estadio'
+    'torcida torcida torcida';
+    margin: 30px auto;
+    padding: 10px;
+}
+h1{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 64px;
+  color: #394A59;
+  margin-top: 10px;
+}
+p{
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 20px;
+    color: #394A59;
+    margin-bottom: 10px;
+}
+
+@media (max-width:999px) {
+  main.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'escudo'
+    'historia'
+    'titulos'
+    'idolos'
+    'idolo'
+    'clubes'
+    'estadio'
+    'torcida';
+    
+    margin: 30px auto;
+  }
+  h1{
+    font-size: 32px;
+  }
+  p{
+    font-size: 1.2em;
+  }
+  .escudo{
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  iframe{
+    max-width: 400px;
+    max-height: 200px;
+  }
+}
+.escudo{
+  margin: 0 auto;
+}
+
+.historia{
+    grid-area: historia;
+    text-align: center;
+}
+
+.titulos{
+    grid-area: titulos;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 840px;
+}
+
+
+
+.idolos-titulo{
+    grid-area: idolos;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+  
+
+  .idolo h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 1rem;
+    color: #F25C05;
+  }
+  
+  .idolo h2::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    margin-right: 10px;
+    background: #394A59;
+  }
+  
+  .idolo p {
+    font-family: Helvetica, Arial;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .idolos-lista {
+    height: 370px;
+    overflow-y: scroll;
+  }
+  
+  .idolos-lista li {
+    cursor: pointer;
+  }
+  
+  .idolos-lista::-webkit-scrollbar {
+    width: 18px;
+  }
+  
+  .idolos-lista::-webkit-scrollbar-thumb {
+    background: #394A59;
+    border-left: 4px solid #faf6ed;
+    border-right: 4px solid #faf6ed;
+  }
+  
+  .idolos-lista::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+  
+  .idolos-descricao section {
+    margin-bottom: 3rem;
+    grid-area: descricao;
+  }
+
+  .idolo{
+      grid-area: idolo;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+      max-width: 840px;
+  }
+  @media (max-width:500px) {
+    .idolo{
+      grid-template-columns: 1fr;
+    }
+    iframe{
+      max-width: 350px;
+      height: 200px;
+    }
+    .estadio img, .foto-titulo img{
+      margin: 0 auto;
+      max-width: 350px;
+    }
+  }
+  [data-tab="content"] section {
+    display: none;
+  }
+  
+  [data-tab="content"] section.ativo {
+    display: block !important;
+  }
+  
+  [data-tab="content"] section.ativo.show-right {
+    animation: show-right .5s forwards;
+  }
+  
+  [data-tab="content"] section.ativo.show-down {
+    animation: show-down .5s forwards;
+  }
+  
+  @keyframes show-right {
+    from {
+      opacity: 0;
+      transform: translate3d(-30px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes show-down {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -30px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .clubes{
+    grid-area: clubes;
+    margin: 0 auto;
+  }
+  .clubes h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .imagens-clubes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  @media (max-width:999px) {
+    .imagens-clubes{
+      grid-template-columns: 1fr 1fr;
+    }
+    .imagens-clubes img{
+      max-width: 100px;
+    }
+  }
+  .clube-logo{
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+  }
+  .clube-nome h2{
+    text-align: center;
+    color: #394A59;
+    font-family: 'Roboto';
+    font-style: bold;
+    font-size: 30px;
+  }
+  
+  .estadio{
+    max-width: 837px;
+    grid-area: estadio;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .torcida{
+    max-width: 837px;
+    grid-area: torcida;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* footer */
+  .footer{
+    margin-top: 70px;
+    width: 100%;
+    background-color: #394a59;
+    text-align: center;
+  }
+  .footer p{
+    color: white;
+  }
+
+  .redes-sociais{
+    max-width: 837px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .redes-sociais a:hover{
+    background-color: #2e3b46;
+  }
+
+
+  .contatos{
+    max-width: 837px;
+    margin: 0 auto;
+    padding: 30px;
+  }
